@@ -13,6 +13,12 @@ public class Main {
         System.out.println("Please enter your area's temperature in Celcius: ");
         degreeC = input.nextInt();
 
+        // Clearing out the impossible statements.
+        while (degreeC < -100 || degreeC > 100){
+            System.out.println("It is can not be this low or high. Reenter: ");
+            degreeC = input.nextInt();
+        }
+
         // If - else method for outputs.
 
         if (degreeC < -20 && degreeC > -100){
